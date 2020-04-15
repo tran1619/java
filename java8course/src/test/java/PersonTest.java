@@ -1,7 +1,10 @@
-package com.michaeltran.java8course;
+package java8course.src.test.java;
+
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-import org.junit.Assert.assertEquals;
+
+import java8course.src.main.java.Person;
 
 
 public class PersonTest {

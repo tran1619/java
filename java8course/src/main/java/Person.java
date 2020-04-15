@@ -1,4 +1,4 @@
-package com.michaeltran.java8course;
+package java8course.src.main.java;
 
 public class Person {
     public String helloWorld() {
