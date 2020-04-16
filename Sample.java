@@ -16,6 +16,7 @@ class Sample {
         System.out.println("Total Sum: " + totalValues(numbers, e -> true));
         System.out.println("Total of Even Numbers: " +totalValues(numbers, e -> e % 2 == 0));
         System.out.println("Total of Odd Numbers: " +totalValues(numbers, e -> e % 2 != 0));
+        System.out.println("Total of value greater than 5: " + totalValues(numbers, e -> e > 5));
 //      numbers.forEach(System.out::println);
     }
 }
