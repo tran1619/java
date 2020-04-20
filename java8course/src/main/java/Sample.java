@@ -2,12 +2,7 @@ package java8course.src.main.java;
 
 import java.util.*;
 import java.util.function.*;
-import java.util.stream.*;
-
-
-import java.util.Collections.*;
-import java.util.Comparator;
-import static java.util.Comparator.*;
+import static java.util.stream.Collectors.*;
 
 class Sample {
     
@@ -37,9 +32,12 @@ class Sample {
         // System.out.println("Total of value greater than 5: " + totalValues(numbers, e -> e > 5));
 
         // sorted list
-        System.out.println(
+        final List<String> personOlderThan30 =
         people.stream()
+              .filter(p -> p.getAge() > 30)
               .map(Person::getName)
-              .collect(Collectors.groupingBy(Person::getName)));
+              .collect(toList());
+
+        System.out.println(personOlderThan30);
    }
 }
