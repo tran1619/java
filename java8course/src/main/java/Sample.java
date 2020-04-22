@@ -3,7 +3,6 @@ package java8course.src.main.java;
 import java.util.*;
 import java.util.function.*;
 import static java.util.stream.Collectors.*;
-import java.util.stream.Stream.*;
 
 class Sample {
     
