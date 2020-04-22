@@ -3,6 +3,7 @@ package java8course.src.main.java;
 import java.util.*;
 import java.util.function.*;
 import static java.util.stream.Collectors.*;
+import java.util.stream.Stream.*;
 
 class Sample {
     
@@ -26,17 +27,11 @@ class Sample {
     public static void main(final String[] args) {
         final List<Person> people = createPeople();
 
-        // System.out.println("Total Sum: " + totalValues(numbers, e -> true));
-        // System.out.println("Total of Even Numbers: " +totalValues(numbers, e -> e % 2 == 0));
-        // System.out.println("Total of Odd Numbers: " +totalValues(numbers, e -> e % 2 != 0));
-        // System.out.println("Total of value greater than 5: " + totalValues(numbers, e -> e > 5));
-
-        // sorted list
-        final List<String> personOlderThan30 =
+        // find all female person
+        final Map<String, Integer> personOlderThan30 =
         people.stream()
-              .filter(p -> p.getAge() > 30)
-              .map(Person::getName)
-              .collect(toList());
+                .filter(person -> person.getGender() == Gender.FEMALE)
+                .collect(toMap(Person::getName, Person::getAge));
 
         System.out.println(personOlderThan30);
    }

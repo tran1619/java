@@ -20,7 +20,7 @@ public class Person {
     }
     
     public String toString() {
-        return String.format("%s  -- %s -- %d", name, gender, age);
+        return String.format("%s -- %s -- %d", name, gender, age);
     }
 
     public Gender getGender() {
