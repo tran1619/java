@@ -1,3 +1,5 @@
+package java8course.src.main.java;
+
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;

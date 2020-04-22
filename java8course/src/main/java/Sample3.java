@@ -1,7 +1,9 @@
+package java8course.src.main.java;
+
 import java.util.*;
 import java.util.function.Predicate;
 
-class Sample {
+class Sample3 {
     
     public static int totalValues (List<Integer> numbers,
     Predicate<Integer> selector) {
