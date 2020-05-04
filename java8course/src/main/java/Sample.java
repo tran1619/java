@@ -2,7 +2,7 @@ package java8course.src.main.java;
 
 import java.util.*;
 import java.util.function.*;
-import static java.util.stream.Collectors.*;
+import java.util.stream.Collectors;
 
 class Sample {
     
@@ -26,12 +26,14 @@ class Sample {
     public static void main(final String[] args) {
         final List<Person> people = createPeople();
 
-        // find all female person
-        final Map<String, Integer> personOlderThan30 =
+        // find all person older than 30 and sorted by name
+        final List<Person> personOlderThan30 =
         people.stream()
-                .filter(person -> person.getGender() == Gender.FEMALE)
-                .collect(toMap(Person::getName, Person::getAge));
+                .filter(p -> p.getAge() > 30)
+                .sorted((p, p1) -> p.getName().compareTo(p1.getName()))
+                .collect(Collectors.toList());
 
-        System.out.println(personOlderThan30);
+        personOlderThan30.stream()
+                        .forEach(System.out::println);    
    }
 }
