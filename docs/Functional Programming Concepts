@@ -70,3 +70,9 @@ boolean test(T t) method avaluates this predicate on argument t and returns true
 Supplier<T> - functional inteface represents a Supplier of results.
 T get() method receives no argument(s) but returns a result.
 
+Functional vs Imperative:
+
+Functional way of doing things focuses on what you want the result to be.
+Imperative way of doing things focuses on how you actually get there, the implementation details.
+
+Functional programming is seperating what you want the result to be from how that result is achieved!
