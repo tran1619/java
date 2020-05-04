@@ -30,7 +30,7 @@ class Sample {
         final List<Person> personOlderThan30 =
         people.stream()
                 .filter(p -> p.getAge() > 30)
-                .sorted((p, p1) -> p.getName().compareTo(p1.getName()))
+                .sorted((x, y) -> x.getName().compareTo(y.getName()))
                 .collect(Collectors.toList());
 
         personOlderThan30.stream()
