@@ -1,3 +1,11 @@
+Functional Programming Features:
+
+Immutability
+Higher-Order
+Functional Composition & Lazy Evaluation
+- remove code complexity
+
+
 Composition - is the concept that you can construct a program by layering functions
 
 Modularity - refers to the idea that you can take a program apart into modules.
